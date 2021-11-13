@@ -23,7 +23,7 @@ function average(values) {
 
 (async () => {
   const data = [];
-  const playlistId = /^(?:https:\/\/open\.spotify\.com\/playlist\/)?(?<id>[a-z0-9]{22})(?:\?si=[a-z0-9]{16})?$/i.exec(PLAYLIST);
+  const playlistId = /^(?:https:\/\/open\.spotify\.com\/playlist\/)?(?<id>[a-z0-9]{22})(?:\?.*)?$/i.exec(PLAYLIST);
   if (!playlistId) {
     console.error("Invalid playlist id");
     process.exit(1);
